@@ -1,0 +1,36 @@
+
+Aktivierung und Speichern der Ports g0/0–1
+
+**Befehle:**
+
+
+--> enable
+--> conf t
+--> int range g0/0 - 1
+--> no shut
+--> do wr
+
+--> exit
+
+_____________________________________________  oder 
+
+enable
+configure terminal
+interface range gigabitEthernet 0/0 - 1
+ no shutdown
+ do write
+exit
+
+Kurze Erklärung:
+
+    enable – Wechselt in den privilegierten EXEC-Modus.
+
+    configure terminal – Wechselt in den globalen Konfigurationsmodus.
+
+    interface range gigabitEthernet 0/0 - 1 – Wählt die Schnittstellen GigabitEthernet 0/0 und 0/1 gleichzeitig aus.
+
+    no shutdown – Aktiviert die Schnittstellen (setzt sie auf „up“).
+
+    do write – Speichert die Konfiguration ins NVRAM (damit sie beim Neustart erhalten bleibt).
+
+    exit – Verlässt den Konfigurationsmodus.
