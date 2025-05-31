@@ -19,3 +19,6 @@
     - Assigning IP Addresses to Router's interfaces.
     - Static IP Address allocation to Host Devices.
     - Test and Verifying Network Communication.
+
+
+![Netzwerkdiagramm](ciscopic1.png)
