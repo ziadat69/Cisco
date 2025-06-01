@@ -1,0 +1,20 @@
+int gig0/0  
+ip address 192.168.20.1 255.255.255.192   
+int gig1/0  
+ip address 192.168.40.65 255.255.255.192
+do wr
+exit 
+
+
+_________________ oder
+
+interface gigabitEthernet 0/0
+ ip address 192.168.20.1 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet 1/0
+ ip address 192.168.40.65 255.255.255.192
+ no shutdown
+
+do write
+exit
