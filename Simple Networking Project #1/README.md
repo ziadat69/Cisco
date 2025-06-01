@@ -1,4 +1,6 @@
 
+![Netzwerkdiagramm](ciscopic1.png)
+
 # Design a network in  Cisco Packet Tracer to connects ACC and DELY departments through the following:
 
 - Each department should contain at least two PCs.
@@ -20,5 +22,3 @@
     - Static IP Address allocation to Host Devices.
     - Test and Verifying Network Communication.
 
-
-![Netzwerkdiagramm](ciscopic1.png)
