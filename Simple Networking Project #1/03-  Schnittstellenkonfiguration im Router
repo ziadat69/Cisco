@@ -1,0 +1,17 @@
+Befehle:
+
+    Im Konfigurationsmodus:
+
+-->  Router(config)# do show start
+
+Zeigt die gespeicherte Startkonfiguration (Startup-Config).
+
+
+
+
+
+Im privilegierten Modus:
+
+--> Router# show ip interface brief
+
+Zeigt eine Übersicht aller Interfaces mit IP-Adressen und Status.
