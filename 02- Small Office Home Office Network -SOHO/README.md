@@ -1,5 +1,4 @@
 
-![Netzwerkdiagramm](ciscopic2.png)
 
 # Small Office Home Office Network
 
@@ -21,6 +20,7 @@ the company has the following requirements during implementation;
 Assume the ISP gave out a base network of 192.168.1.0, 
 you as the young network engineer who has been hired, design and implement a network considering the above requirements. 
 
+![Netzwerkdiagramm](ciscopic2.png)
 
 # Technologies Implemented
 
