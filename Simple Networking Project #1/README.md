@@ -7,22 +7,21 @@ In one of the suburbs of Tech City, there was a startup company called **"TechLo
 
 The goal of this project was to ensure that employees in the ACCOUNTS department and the DELIVERY department could communicate smoothly through a reliable and fast network. A young network engineer sat down to draw up a comprehensive plan, taking into account the main requirements:
 
-🔹 **Devices:**
-The engineer used a single router and two switches (one for each department), with two computers in each of the ACCOUNTS and DELIVERY departments.
+ - **Devices:** The engineer used a single router and two switches (one for each department), with two computers in each of the ACCOUNTS and DELIVERY departments.
 
-🔹 **Network addresses:**
-The base network 192.168.20.0 was assigned, and it was divided as follows:
+ - **Network addresses:**
+ The base network 192.168.20.0 was assigned, and it was divided as follows:
 
-* **ACCOUNTS:** 192.168.20.0/26
-* **DELIVERY:** 192.168.20.64/26
+         ACCOUNTS: 192.168.20.0/26
 
-🔹 **IP configuration:**
-Each device was given a suitable IP address and a default gateway connected to the router.
+         DELIVERY:192.168.20.64/26
 
-🔹 **Connections:**
+ - **IP configuration:**
+ Each device was given a suitable IP address and a default gateway connected to the router.
+
+- **Connections:**
 The appropriate cables (straight-through and crossover) were used to connect the computers to the switches and the router.
-
-🔹 **Testing:**
+-  **Testing:**
 The engineer ran **ping** tests to ensure that all devices could communicate with each other within the network.
 
 And so, the project was successfully completed, and **TechLogixxx** now had a reliable network connecting its vital departments! 🚀✨
