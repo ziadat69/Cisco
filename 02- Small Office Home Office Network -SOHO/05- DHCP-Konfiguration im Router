@@ -1,0 +1,27 @@
+Router> enable
+Router# configure terminal
+
+service dhcp
+
+ip dhcp pool admin-pool
+ network 192.168.1.0 255.255.255.192
+ default-router 192.168.1.1
+ dns-server 192.168.1.1
+ domain-name Admin.com
+ exit
+
+ip dhcp pool HR-pool
+ network 192.168.1.64 255.255.255.192
+ default-router 192.168.1.65
+ dns-server 192.168.1.65
+ domain-name HR.com
+ exit
+
+ip dhcp pool cs-pool
+ network 192.168.1.128 255.255.255.192
+ default-router 192.168.1.129
+ dns-server 192.168.1.129
+ domain-name cs.com
+ exit
+
+write memory
