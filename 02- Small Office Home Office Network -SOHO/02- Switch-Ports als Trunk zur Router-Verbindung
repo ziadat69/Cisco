@@ -1,0 +1,6 @@
+Switch(config)#        int fa0/0
+Switch(config-if)#     switchport mode trunk
+
+do wr
+
+exit
