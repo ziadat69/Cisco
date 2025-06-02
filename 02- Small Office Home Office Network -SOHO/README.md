@@ -1,3 +1,6 @@
+
+![Netzwerkdiagramm](ciscopic2.png)
+
 # Small Office Home Office Network
 
 XYZ company is a fast-growing company in Eastern Australia with more than 2 million customers globally. 
