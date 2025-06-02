@@ -1,0 +1,19 @@
+Router>        enable
+Router#        configure terminal
+
+     interface gigabitEthernet0/0.10
+     encapsulation dot1Q 10
+     ip address 192.168.1.1 255.255.255.192
+     exit
+
+    interface gigabitEthernet0/0.20
+    encapsulation dot1Q 20
+    ip address 192.168.1.65 255.255.255.192
+    exit
+
+    interface gigabitEthernet0/0.30
+    encapsulation dot1Q 30
+    ip address 192.168.1.129 255.255.255.192
+    exit
+
+    write memory
