@@ -1,0 +1,4 @@
+Router>               enable
+Router#               configure terminal
+Router(config)#       interface gig0/0
+Router(config-if)#    no shutdown
