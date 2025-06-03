@@ -11,11 +11,13 @@ This project designs and implements a secure network for Engel Hotel with three 
 * Routers act as **DHCP servers** for their VLANs.
 * **SSH enabled** on all routers for secure remote access.
 * Port security with **sticky MAC address** enabled on IT switch port fa0/1 for device Test-PC; unauthorized access shuts down the port.
+  
+ ![Netzwerkdiagramm](ciscopic3.png)
 
----
 
 
-Technologies Implemented
+
+# Technologies Implemented
 
     - Creating a network topology using Cisco Packet Tracer.
     - Hierarchical Network Design.
