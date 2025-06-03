@@ -14,6 +14,22 @@ This project designs and implements a secure network for Engel Hotel with three 
 
 ---
 
+
+Technologies Implemented
+
+    - Creating a network topology using Cisco Packet Tracer.
+    - Hierarchical Network Design.
+    - Connecting Networking devices with Correct cabling.
+    - Creating VLANs and assigning ports VLAN numbers.
+    - Subnetting and IP Addressing.
+    - Configuring Inter-VLAN Routing (Router on a stick).
+    - Configuring DHCP Server (Router as the DHCP Server).
+    - Configuring SSH for secure Remote access.
+    - Configuring switchport security or Port-Security on the switches.
+    - Configuring WLAN or wireless network (Cisco Access Point).
+    - Host Device Configurations.
+    - Test and Verifying Network Communication.
+
 A reliable, scalable, and secure network supporting all hotel departments efficiently.
 
 ---
