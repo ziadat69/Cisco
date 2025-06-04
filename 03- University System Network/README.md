@@ -15,7 +15,8 @@ This project implements a secure, scalable, and organized network topology for A
 * **Smaller Campus**
 
   * **Faculty of Health and Sciences**: Staff and student labs are on separate floors, each with its dedicated subnet and VLAN.
-
+    
+ ![Netzwerkdiagramm](ciscopic4.png)
 ## Key Features
 
 * **VLAN Segmentation**: Each department and faculty is assigned a separate VLAN and IP network to enhance security and organization.
