@@ -45,7 +45,7 @@ This project implements a secure, scalable, and organized network topology for A
 
 ## Packet Tracer Configuration
 
-The Packet Tracer file (`albion_university_network.pkt`) contains the full topology setup, including:
+The Packet Tracer file (`pr4.pkt`) contains the full topology setup, including:
 ✅ VLAN configuration on switches
 ✅ Router-based DHCP server for Building A
 ✅ RIPv2 routing for internal communication
