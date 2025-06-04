@@ -2,7 +2,7 @@
 
 # Skyline University Network Design Project
 
-This project implements a secure, scalable, and organized network topology for Albion University, which consists of two campuses located 20 miles apart.
+This project implements a secure, scalable, and organized network topology for Skyline University, which consists of two campuses located 20 miles apart.
 
 ## Network Overview
 
