@@ -37,4 +37,15 @@ A reliable, scalable, and secure network supporting all hotel departments effici
 ---
 
 
+# Packet Tracer Configuration
 
+The Packet Tracer file (pr3.pkt) contains the complete network topology setup, including:
+✅ VLAN configuration on switches
+✅ Router-based DHCP server for dynamic IP assignment
+✅ Inter-VLAN routing (Router-on-a-Stick)
+✅ SSH configuration for secure remote access
+✅ Switchport security on the switches
+✅ WLAN setup with Cisco Access Points
+✅ Host device configurations for network connectivity
+
+This configuration ensures a reliable and secure network environment that effectively supports user requirements.
