@@ -1,0 +1,86 @@
+
+
+
+(((((in router 1)))))
+
+
+
+ en con t  hostname router1hotel2
+
+Ip domin-name  hotel
+
+username hotel password hotel
+
+crypto key generate rsa 
+
+--> 1024 
+
+Line vty 0 15 
+
+Login local
+
+transport  input ssh 
+
+do wr
+exit
+
+____________________________________________________________________________________________________________________________________________________________
+
+((((((  ((in router 2))))))))
+
+
+ en con t  hostname router2hotel2
+
+Ip domain-name  hotel
+
+username hotel password hotel
+
+crypto key generate rsa 
+
+--> 1024 
+
+Line vty 0 15 
+
+Login local
+
+transport  input ssh 
+
+do wr
+exit
+
+____________________________________________________________________________________________________________________________________________________________
+
+((((((  ((in router 3))))))))
+
+
+ en con t  hostname router3hotel2
+
+Ip domain-name  hotel
+
+username hotel password hotel
+
+crypto key generate rsa 
+
+--> 1024 
+
+Line vty 0 15 
+
+Login local
+
+transport  input ssh 
+
+do wr
+
+exit
+____________________________________________________________________________________________________________________________________________________________
+
+((((test ssh von pc zu router))))))
+
+
+--> ssh -l hotel 10.10.10.1                 (the username and the ip can we any interface in router)   
+
+
+
+
+
+
