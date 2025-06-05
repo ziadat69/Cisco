@@ -1,0 +1,110 @@
+
+(((((   (((im router 1))))))))
+
+enable  
+config  
+
+
+ service  dhcp   ip 
+
+dhcp pool admin-pool
+
+network  192.168.1.0 255.255.255.0  
+default-router 192.168.1.1
+dns-server 192.168.1.1
+domain-name it.com 
+—> do wr
+
+
+
+ip dhcp pool HR-pool
+
+network  192.168.2.0 255.255.255.0  
+default-router 192.168.2.1
+dns-server 192.168.2.1
+domain-name admin.com 
+—> do wr
+—> exit
+
+_______________________________ ___________________________________________________________________________________________ ____________________________________________________________
+
+(((((   (((im router 2))))))))
+
+enable  
+config  
+ service  dhcp   ip 
+
+dhcp pool sales-pool
+
+network  192.168.5.0 255.255.255.0
+default-router 192.168.5.1
+dns-server 192.168.5.1 
+domain-name sales.com
+—> do wr
+
+
+ip dhcp pool hr-pool
+
+network  192.168.4.0 255.255.255.0  
+default-router 192.168.4.1  
+dns-server 192.168.4.1
+domain-name hr.com
+—> do wr
+
+
+ip dhcp pool fin-pool
+
+network  192.168.3.0 255.255.255.0
+default-router 192.168.3.1  
+dns-server 192.168.3.1
+domain-name fin.com 
+—> do wr 
+—> exit      
+ _______________________________ ___________________________________________________________________________________________ ____________________________________________________________
+
+
+(((((   (((im router 3))))))))
+
+
+enable  
+config  
+
+ service  dhcp      enable  config  
+ service  dhcp   ip dhcp pool Logi-pool
+
+network  192.168.6.0 255.255.255.0  
+default-router 192.168.6.1  
+dns-server 192.168.6.1 
+domain-name Logi.com 
+—> do wr
+
+
+ip dhcp pool store-pool
+
+network  192.168.7.0 255.255.255.0  
+default-router 192.168.7.1
+dns-server 192.168.7.
+1 domain-name store.com
+—> do wr 
+
+
+
+ip dhcp pool recep-pool
+
+network  192.168.8.0 255.255.255.0  
+default-router 192.168.8.1  
+dns-server 192.168.8.1 
+domain-name recep.com 
+—> do wr 
+exit      
+
+
+
+
+
+
+
+
+
+
+
