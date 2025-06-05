@@ -1,0 +1,43 @@
+  (((((((router1)))))))
+
+en  
+conf t
+
+Router(config)#       router ospf 10                  ** ((((  Definition aller Netzwerke, die mit den Routern verbunden sind)))))
+
+  Router(config-router)#        network 10.10.10.4 255.255.255.252 area 0
+Router(config-router)#        network 10.10.10.0 255.255.255.252 area 0
+Router(config-router)#        network 192.168.1.0 255.255.255.0 area 0
+Router(config-router)#        network 192.168.2.0 255.255.255.0 area 0
+
+Router(config-router)#do wr
+
+______________________________________________________________ _______________________________________________________________
+
+  (((((((router 2)))))))
+
+en  
+conf t 
+ Router(config)#     router ospf 10                   ** ((((  Definition aller Netzwerke, die mit den Routern verbunden sind)))))
+  Router(config-router)#       network 10.10.10.0 255.255.255.252 area 0
+Router(config-router)#       network 10.10.10.8 255.255.255.252 area 0
+
+Router(config-router)#       network 192.168.5.0 255.255.255.0 area 0
+Router(config-router)#       network 192.168.4.0 255.255.255.0 area 0
+Router(config-router)#       network 192.168.3.0 255.255.255.0 area 0
+Router(config-router)#       do wr  
+
+______________________________________________________________ _______________________________________________________________
+
+
+ (((((((router 3)))))))
+
+  en
+conf t                                                   ** ((((  Definition aller Netzwerke, die mit den Routern verbunden sind)))))
+ Router(config)#      router ospf 10
+  Router(config-router)#   network 10.10.10.4 255.255.255.252 area 0
+Router(config-router)#   network 10.10.10.8 255.255.255.252 area 0
+Router(config-router)#   network 192.168.8.0 255.255.255.0 area 0
+Router(config-router)#   network 192.168.7.0 255.255.255.0 area 0
+Router(config-router)#   network 192.168.6.0 255.255.255.0 area 0
+Router(config-router)#   do wr
