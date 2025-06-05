@@ -1,0 +1,77 @@
+((((((( In Switch 1  )))))))
+
+enable  
+config 
+
+Switch(config)#                 int range fa0/2-3      ((((from Switch to hosts))))
+
+ Switch(config-if-range)#       switchport mode access 
+switchport                     access vlan 20
+
+  Switch(config)#                int range fa0/4-6         ((((from router to hosts))))
+Switch(config-if-range)#       switchport mode access   
+                               switchport access vlan 10   
+
+
+Switch(config)#      int range fa0/1               ** ((((from Switch to router)))) 
+                     switchport mode access
+                     switchport mode trunk 
+                     do wr
+
+___________________________________________________________ 
+
+((((((((In Switch 2  ))))))))))
+
+
+enable
+config 
+Switch(config)#                int range fa0/6-8           ((((from router to hosts))))
+ Switch(config-if-range)#       switchport mode access 
+                               switchport access vlan 30
+
+  Switch(config)#              int range fa0/2-3               ((((from router to hosts))))              
+Switch(config-if-range)#     switchport mode access
+                             switchport access vlan 40  
+
+Switch(config)#               int range fa0/4-5           ((((from router to hosts)))) 
+Switch(config-if-range)#      switchport mode access
+                              switchport access vlan 50  
+
+Switch(config)#               int range fa0/1               ** ((((from Switch to router)))) 
+                              switchport mode access
+                              switchport mode trunk 
+do wr  
+
+___________________________________________________________ 
+
+(((((((( In Switch 3  ))))))))))
+
+enable
+config   Switch(config)#      int range fa0/4-6 
+
+ Switch(config-if-range)#       switchport mode access         ((((from router to hosts)))) 
+                               switchport access vlan 60
+
+  Switch(config)#                 int range fa0/7-8               ((((from router to hosts)))) 
+Switch(config-if-range)#        switchport mode access
+                                switchport access vlan 70
+
+
+Switch(config)#                 int range fa0/1-2               ((((from router to hosts)))) 
+Switch(config-if-range)#        switchport mode access
+                                switchport access vlan 80  
+    
+Switch(config)#                 int range fa0/1                     ** ((((from Switch to router)))) 
+                                switchport mode access  
+                                switchport mode trunk 
+do wr  
+
+
+
+
+
+
+
+
+
+
