@@ -33,3 +33,21 @@ you as the young network engineer who has been hired, design and implement a net
     - Configuring WLAN or wireless network (Cisco Access Point).
     - Host Device Configurations.
     - Test and Verifying Network Communication.
+
+
+--
+
+# Packet Tracer Configuration
+
+The Packet Tracer file (pr2.pkt) contains the full network setup, including:
+✅ Simple network creation using a router and access layer switch
+✅ Connecting networking devices with correct cabling
+✅ VLAN creation and assigning VLAN numbers to switch ports
+✅ Subnetting and IP addressing
+✅ Configuring Inter-VLAN routing (Router on a stick)
+✅ Configuring DHCP server on the router for dynamic IP assignment
+✅ Configuring WLAN using Cisco Access Points
+✅ Host device configurations
+✅ Testing and verifying network communication
+
+This configuration ensures a reliable and efficient network environment that meets the users' connectivity and security needs.
