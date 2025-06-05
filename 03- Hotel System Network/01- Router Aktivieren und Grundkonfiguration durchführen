@@ -9,10 +9,13 @@ interface ser0/2/0
  no shutdown
 interface gigt0/0
  no shutdown
+
 interface ser0/2/0
  clock rate 64000
+
 interface serial0/2/1
  clock rate 64000
+
 end
 write memory
 __________________________________________________________________________
@@ -23,13 +26,17 @@ enable
 configure terminal
 interface serl0/1/0
  no shutdown
+
 interface ser0/1/1
  no shutdown
+
 interface gig0/0
  no shutdown
+
 interface ser0/1/1
  clock rate 64000
-end
+
+
 write memory
 __________________________________________________________________________
 
@@ -39,9 +46,12 @@ enable
 configure terminal
 interface ser0/2/0
  no shutdown
+
 interface ser0/2/1
  no shutdown
+
 interface gig0/0
  no shutdown
-end
+
+
 write memory
