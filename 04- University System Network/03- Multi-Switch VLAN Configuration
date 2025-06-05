@@ -1,0 +1,62 @@
+((((((multiswitch konfiegeren fir VLAN))))))))  ({
+
+((((((multiswitch1))))))))
+
+
+  Switch(config)#          int g1/0/9    ((((from multiswitch to router))))  
+                         switchport trunk encapsulation dortig  
+                         switchport mode trunk 
+
+do wr
+
+Switch(config-if)#     int gig1/0/1  (((from multiswitch to switch))))
+Switch(config-if)#     switchport mode access 
+Switch(config-if)#     switchport access vlan 10
+
+Switch(config-if)#     int gig1/0/2
+Switch(config-if)#     switchport mode access  (((from multiswitch to switch))))
+Switch(config-if)#     switchport access vlan 20
+
+
+Switch(config-if)      int gig1/0/3
+Switch(config-if)#     switchport mode access   (((from multiswitch to switch))))
+Switch(config-if)#     switchport access vlan 30
+
+Switch(config-if)#     int gig1/0/4
+Switch(config-if)#     switchport mode access     (((from multiswitch to switch))))
+Switch(config-if)#     switchport access vlanv40
+ Switch(config-if)#     int gig1/0/5  (((from multiswitch to switch))))
+Switch(config-if)#     switchport mode access 
+Switch(config-if)#     switchport access vlan 50
+
+Switch(config-if)#     int gig1/0/6
+Switch(config-if)#     switchport mode access  (((from multiswitch to switch))))
+Switch(config-if)#     switchport access vlan 60
+
+
+Switch(config-if)      int gig1/0/7
+Switch(config-if)#     switchport mode access   (((from multiswitch to switch))))
+Switch(config-if)#     switchport access vlan 70
+
+Switch(config-if)#     int gig1/0/8
+Switch(config-if)#     switchport mode access     (((from multiswitch to switch))))
+Switch(config-if)#     switchport access vlan 80
+ do wr  
+_________________________________________   ______________________________________________
+
+((((((multiswitch 2)))))))
+
+Switch(config)#            int g1/0/9    ((((from multiswitch to router))))  
+                           switchport trunk encapsulation dortig
+                           switchport mode trunk 
+
+do wr    
+Switch(config-if)#      int gig1/0/2  (((from multiswitch to switch))))
+Switch(config-if)#           switchport mode access 
+Switch(config-if)#           switchport access vlan 90   
+
+Switch(config-if)#     int gig1/0/3  (((from multiswitch to switch))))
+Switch(config-if)#     switchport mode access 
+Switch(config-if)#     switchport access plan 100
+
+ ______________________________________________ ______________________________________________
