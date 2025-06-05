@@ -1,0 +1,96 @@
+(((((In switch 1)))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 10
+do wr
+exit    
+
+(((((In switch 2   )))))
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 20
+do wr
+exit    
+
+(((((In switch 3   )))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 30
+do wr
+exit     
+
+(((((In switch 4   )))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 40
+do wr
+exit
+
+(((((In switch 5   )))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 50
+do wr
+
+(((((In switch 6   )))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 40
+do wr
+exit    
+
+(((((In switch 7   )))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 70
+do wr
+
+(((((In switch  8)))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 80
+do wr
+exit    
+
+(((((In switch 9   )))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 90
+do wr
+exit
+
+(((((In switch 10)))))
+
+en
+conf t
+int range fa0/1-24
+switchport mode access 
+switchport access vlan 100
+do wr
+exit 
