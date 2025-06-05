@@ -1,0 +1,27 @@
+
+Kurze Erklärung:
+➡️ In diesem Abschnitt wird Port-Security auf dem Switch-Port Fa0/2 konfiguriert,
+damit nur ein Gerät an diesem Port zugelassen ist. Dabei wird die MAC-Adresse automatisch erkannt und gespeichert.
+Bei Verstößen wird der Port automatisch deaktiviert (shutdown).
+
+
+-->
+
+
+
+en
+conf t
+
+
+int fa0/2
+switchport port-security
+switchport port-security maximum 1
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+do wr
+
+
+
+
+
+-->  do show port-security    ** ((((((do show port-security zeigt Port-Security-Daten für den Switch)))))))
