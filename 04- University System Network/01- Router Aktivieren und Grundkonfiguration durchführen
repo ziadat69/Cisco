@@ -1,0 +1,70 @@
+   
+(((((Router1)))))
+
+en 
+Router# conf t
+
+Router(config)#      int se0/1/0
+ Router(config-if)#   no shutdown 
+
+  Router(config-if)#   int se0/1/1
+Router(config-if)#   no shutdown 
+
+ Router(config-if)#   int g0/0
+Router(config-if)#   no shutdown 
+ do wr
+
+
+Router(config)#              int se0/1/0                       
+
+Router(config-if)#         clock rate ?
+ Router(config-if)#         clock rate 64000 
+ Router(config)#            int se0/1/1
+
+Router(config-if)#       clock rate ?
+ Router(config-if)#       clock rate 64000 
+
+do wr
+
+_____________________________________  _____________________________________  _____________________________________  _____________________________________  _____________________________________  _____________________________________  
+
+(((((Router2)))))
+
+
+Router> en 
+Router# conf t
+
+Router(config)#int se0/1/0
+ Router(config-if)#no shutdown 
+
+  Router(config-if)#int se0/1/1
+Router(config-if)#no shutdown 
+
+ Router(config-if)#int g0/0
+Router(config-if)#no shutdown 
+
+ do wr   
+_____________________________________  _____________________________________  _____________________________________  _____________________________________  _____________________________________  _____________________________________  
+
+
+
+(((((Router3)))))
+
+Router>  en 
+Router#  conf t
+
+Router(config)#int se0/2/0
+ Router(config-if)#no shutdown 
+
+  Router(config-if)#int se0/2/1
+Router(config-if)#no shutdown 
+
+ Router(config-if)#int g0/0
+Router(config-if)#no shutdown 
+ do wr
+
+
+
+
+
+ 
