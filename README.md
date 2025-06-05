@@ -18,6 +18,9 @@ This project focuses on designing a network for a hotel, covering various areas 
 4️⃣ **University System Network**  
 A larger, more complex network designed for a university or educational institution. It includes multiple subnets, VLANs, redundant connections, and services like VoIP or video surveillance. This project emphasizes scalability and efficiency in a dynamic environment.
 
+5️⃣ **Company/Business System Network**  
+This project showcases a corporate network design suitable for small to medium-sized businesses. It includes separate departments or workgroups (such as HR, Sales, IT), each with its own VLANs and secure connections to ensure data separation and policy enforcement. It also demonstrates the integration of key services like file servers, VoIP, and security appliances
+
 ---
 
 ## ⚙️ Technologies and Tools
