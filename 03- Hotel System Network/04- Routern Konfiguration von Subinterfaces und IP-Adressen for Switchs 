@@ -1,0 +1,67 @@
+((((((((im router 1)))))))))
+
+
+enable  
+config  
+
+int gig0/0.10
+ encapsulation dot1Q 10  
+ip address 192.168.1.1 255.255.255.0
+ do wr
+
+
+int gig0/0.70
+ encapsulation dot1Q 70  
+ip address 192.168.2.1 255.255.255.0
+   do wr
+exit    
+_____________________________________________________________ _______________________________________________________________
+
+((((((((im router 2)))))))))
+
+enable  
+config  
+
+  int gig0/0.80
+ encapsulation dot1Q 80  
+ip address 192.168.8.1 255.255.255.0
+ do wr
+
+int gig0/0.70
+ encapsulation dot1Q 70
+ip address 192.168.7/1 255.255.255.0
+   
+int gig0/0.60
+ encapsulation dot1Q 60
+ip address 192.168.6.1 255.255.255.192
+  do wr
+exit
+
+
+_____________________________________________________________ _______________________________________________________________
+
+
+((((((((im router 3)))))))))
+
+ int gig0/0.80
+ encapsulation dot1Q 80
+ip address 192.168.8.1 255.255.255.0
+ do wr  
+
+int gig0/0.70
+ encapsulation dot1Q 70
+ip address 192.168.7.1 255.255.255.0
+   
+int gig0/0.60
+ encapsulation dot1Q 60  
+ip address 192.168.6.1 255.255.255.192
+  do wr
+exit 
+
+
+
+
+
+
+
+
