@@ -18,7 +18,7 @@ The network design must accommodate the current needs of all staff and be prepar
 
 
 
-![Netzwerkdiagramm](cisco5.png)
+![Netzwerkdiagramm](ciscopic5.png)
 
 ## CONFIG STEPS 
 1. Basic settings to all devices plus ssh on the routers and l3 switches.
