@@ -65,5 +65,5 @@ The complete network topology, including all departments, redundancy, routing, a
 
 ### Resources
 
-- **Packet Tracer file:** [Download here](#)  
+- **Packet Tracer file:** The Packet Tracer file (`pr5.pkt`) contains the full topology setup.
 
