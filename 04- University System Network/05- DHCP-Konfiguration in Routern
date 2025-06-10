@@ -1,0 +1,65 @@
+
+
+(((IN Router)))
+
+enable
+config
+service dhcp
+ip dhcp pool admin-pool
+network 192.168.1.0 255.255.255.0
+default-router 192.168.1.1
+dns-server 192.168.1.1
+domain-name it.com
+do wr
+
+ip dhcp pool hr-pool
+network 192.168.2.0 255.255.255.0
+default-router 192.168.2.1
+dns-server 192.168.2.1
+domain-name hr.com
+do wr
+
+ip dhcp pool fr-pool
+network 192.168.3.0 255.255.255.0
+default-router 192.168.3.1
+dns-server 192.168.3.1
+domain-name fri.com
+do wr
+
+ip dhcp pool BUSNESS-pool
+network 192.168.4.0 255.255.255.0
+default-router 192.168.4.1
+dns-server 192.168.4.1
+domain-name BUSNESS.com
+do wr
+
+ip dhcp pool ec-pool
+network 192.168.5.0 255.255.255.0
+default-router 192.168.5.1
+dns-server 192.168.5.1
+domain-name ec.com
+do wr
+
+ip dhcp pool ad-pool
+network 192.168.6.0 255.255.255.0
+default-router 192.168.6.1
+dns-server 192.168.6.1
+domain-name ad.com
+do wr
+
+ip dhcp pool stu-pool
+network 192.168.7.0 255.255.255.0
+default-router 192.168.7.1
+dns-server 192.168.7.1
+domain-name stu.com
+do wr
+
+ip dhcp pool it-pool
+network 192.168.8.0 255.255.255.0
+default-router 192.168.8.1
+dns-server 192.168.8.1
+domain-name it.com
+do wr
+
+exit
+do wr
