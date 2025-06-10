@@ -30,9 +30,9 @@ The network design must accommodate the current needs of all staff and be prepar
 7. DHCP server device configurations.
 8. Inter-VLAN routing on the l3 switches plus ip dhcp helper addresses.
 9. Wireless network configurations.
-10. PAT + Access Control List
-10.1.1. Default static route
-11. Verifying and testing configurations.
+10. PAT + Access Control List.
+11. Default static route
+12. Verifying and testing configurations.
 
 
 ## Technologies Implemented
