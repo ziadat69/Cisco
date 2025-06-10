@@ -1,0 +1,54 @@
+((( (ip address im router)))))
+
+(((Router 2))))
+
+    Router(config-if)#     int s0/2/0 (( to router 1 ))
+Router(config-if)#     ip address 10.10.10.2 255.255.255.252
+
+   Router(config-if)#     int gig0/0.90 ((nach innen))
+Router(config-if)#     encapsulation dot1Q 90
+Router(config-if)#     ip address 192.168.9.1 255.255.255.0
+
+Router(config-if)#     int gig0/0.100 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 100
+Router(config-if)#     ip address 192.168.10.1 255.255.255.0
+
+((((((Router 1))))))
+
+Router(config-if)#     int s0/1/0 (( to router 3))
+Router(config-if)#     ip address 10.10.10.5 255.255.255.252
+
+   Router(config-if)#     int s0/1/1 (( to router 2))
+Router(config-if)#     ip address 10.10.10.1 255.255.255.252   
+
+Router(config-if)#     int gig0/0.10 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 10
+Router(config-if)#     ip address 192.168.1.1 255.255.255.0   
+
+Router(config-if)#     int gig0/0.20 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 20
+Router(config-if)#     ip address 192.168.2.1 255.255.255.0  
+
+Router(config-if)#     int gig0/0.30 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 30
+Router(config-if)#     ip address 192.168.3.1 255.255.255.0
+
+Router(config-if)#     int gig0/0.40 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 40
+Router(config-if)#     ip address 192.168.4.1 255.255.255.0
+
+Router(config-if)#     int gig0/0.50 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 5 0
+Router(config-if)#     ip address 192.168.5.1 255.255.255.0
+
+Router(config-if)#     int gig0/0.60 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 60
+Router(config-if)#     ip address 192.168.60.1 255.255.255.0
+
+Router(config-if)#     int gig0/0.70 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 70 
+Router(config-if)#     ip address 192.168.7.1 255.255.255.0
+
+Router(config-if)#     int gig0/0.80 (( nach innen))
+Router(config-if)#     encapsulation dot1Q 80 
+Router(config-if)#     ip address 192.168.8.1 255.255.255.0   
