@@ -1,0 +1,45 @@
+rip  protocol um die Netzwerk zusammen reden   
+
+
+
+((((( router 2)))))  
+
+
+en  conf t  
+
+Router(config)#   router arp 
+
+Router(config-router)#      network 10.10.10.4
+
+
+Router(config-router)#network 192.168.9.0 
+Router(config-router)#network 192.168.10.0 
+
+
+
+((((( router 1)))))
+
+en  conf t  
+
+Router(config)#   router arp  
+
+Router(config-router)#    network 192.168.1.0 
+Router(config-router)#    network 192.168.2.0 
+Router(config-router)#.   network 192.168.3.0 
+Router(config-router)#    network 192.168.4.0 
+Router(config-router)#    network 192.168.5.0 
+Router(config-router)#    network 192.168.6.0 
+Router(config-router)#    network 192.168.7.0 
+Router(config-router)#    network 192.168.8.0 
+Router(config-router)#    network 10.10.10.0
+Router(config-router)#    network 10.10.10.4
+
+ ((((( router 3)))))
+
+en  conf t 
+
+Router(config)#              router rip
+
+Router(config-router)#  network 10.10.10.4
+Router(config-router)# network 20.0.0.0
+ 
