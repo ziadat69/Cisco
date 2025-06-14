@@ -1,0 +1,35 @@
+==============
+Grundkonfiguration
+==============
+
+en
+conf t
+hostname multiswitch1-SW
+line console 0
+password cisco
+login
+exit
+enable password Cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do wr
+
+
+==============
+SSH-Konfiguration
+==============
+
+
+enable
+configure terminal
+ip domain-name multiswitch.net
+username admin password cisco
+crypto key generate rsa
+(( z. B. 1024))
+1024
+line vty 0 15
+login local
+transport input ssh
+exit
+do write
