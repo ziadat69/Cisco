@@ -69,7 +69,7 @@ Using the `192.168.100.0/24` private IP range:
 
 ## 📁 Project Files
 
-- `ciscopic6.pkt`: Cisco Packet Tracer project file
+- pr6.pkt`: Cisco Packet Tracer project file
 
 
 
