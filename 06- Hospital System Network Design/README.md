@@ -5,7 +5,7 @@
 Melbourne Health Services is a healthcare organization based in Australia, operating from two sites within the same city: a main hospital (HQ) and a branch hospital located approximately 20 km away. The organization plans to transition from a third-party IT provider to an in-house IT infrastructure. This project focuses on designing and implementing a secure, scalable, and cost-effective hierarchical network architecture using Cisco Packet Tracer.
 
 
-![Netzwerkdiagramm](ciscopic6.png)
+![Netzwerkdiagramm](ciscopic.png)
 
 
 ## 🏥 Network Requirements
