@@ -1,0 +1,95 @@
+==========================
+ Switch 0: SALES-SW
+==========================
+enable
+configure terminal
+hostname SALES-SW
+line console 0
+password cisco             ((password eingaben))
+login
+exit
+enable secret cisco                 ((( en befehl password Eingeben))) 
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do write
+
+==========================
+Switch 1: HR-SW
+==========================
+enable
+configure terminal
+hostname HR-SW
+line console 0
+password cisco
+login
+exit
+enable secret cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do write
+
+ ==========================
+ Switch 2: Fin-SW
+==========================
+enable
+configure terminal
+hostname Fin-SW
+line console 0
+password cisco
+login
+exit
+enable secret cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do write
+
+==========================
+Switch 3: Admin-SW
+==========================
+enable
+configure terminal
+hostname Admin-SW
+line console 0
+password cisco
+login
+exit
+enable secret cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do write
+
+==========================
+Switch 4: ice-SW
+ ==========================
+enable
+configure terminal
+hostname ice-SW
+line console 0
+password cisco
+login
+exit
+enable secret cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do write
+
+==========================
+Switch 5: servers-SW
+==========================
+enable
+configure terminal
+hostname servers-SW
+line console 0
+password cisco
+login
+exit
+enable secret cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+do write
