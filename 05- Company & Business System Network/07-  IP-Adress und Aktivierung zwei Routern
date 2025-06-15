@@ -1,0 +1,61 @@
+##########################################
+#        ROUTER 1 - KONFIGURATION        #
+##########################################
+
+(( Verbindung zu Multilayer Switch 0))
+
+
+interface GigabitEthernet0/0
+ no shutdown
+ ip address 172.16.3.146 255.255.255.252
+
+(( Verbindung zu Multilayer Switch 1 ))
+
+interface GigabitEthernet0/1
+ no shutdown
+ ip address 172.16.3.54 255.255.255.252
+
+(( ! Serielle Verbindung zu Router 2 (Link 1) ))
+
+interface Serial0/2/0
+ no shutdown
+ clock rate 64000
+ ip address 195.136.17.1 255.255.255.252
+
+((! Serielle Verbindung zu Router 2 (Link 2) ))
+
+interface Serial0/2/1
+ no shutdown
+ clock rate 64000
+ ip address 195.136.17.9 255.255.255.252
+
+do wr
+
+##########################################
+#        ROUTER 2 - KONFIGURATION        #
+##########################################
+
+(( Verbindung zu Multilayer Switch 0 ))
+interface GigabitEthernet0/0
+ no shutdown
+ ip address 172.16.3.150 255.255.255.252
+
+(( Verbindung zu Multilayer Switch 1 ))
+interface GigabitEthernet0/1
+ no shutdown
+ ip address 172.16.3.158 255.255.255.252
+
+(( Serielle Verbindung zu Router 1 (Link 2)))
+
+interface Serial0/3/0
+ no shutdown
+ ip address 195.136.17.13 255.255.255.252
+
+(( Serielle Verbindung zu Router 1 (Link 1) ))
+
+interface Serial0/3/1
+ no shutdown
+ ip address 195.136.17.5 255.255.255.252
+
+
+do wr
