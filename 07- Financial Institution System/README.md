@@ -42,9 +42,9 @@ Key Requirements
 
 
 
-![Netzwerkdiagramm](ciscopic.png) 
+![Netzwerkdiagramm](ciscopic7.png) 
 
-![Netzwerkdiagramm](ciscopic.png)
+
 
 
 ## Technologies and Concepts Implemented
@@ -104,4 +104,4 @@ Key Requirements
 
     pk7.pkt — Cisco Packet Tracer project file
 
-
+![Netzwerkdiagramm](ccccs.png)
