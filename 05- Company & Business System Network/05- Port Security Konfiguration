@@ -1,0 +1,16 @@
+# Cisco Switch Port Security Configuration
+# Limits access to only one device on interface FastEthernet0/2
+
+enable
+configure terminal
+
+interface fa0/2
+ switchport port-security
+ switchport port-security maximum 1          # Only one device allowed
+ switchport port-security mac-address sticky # Automatically learn and bind MAC
+ switchport port-security violation shutdown # Shutdown port if violated
+
+do write memory
+
+# Optional: Show current port security status
+do show port-security
