@@ -1,0 +1,103 @@
+# Switch VLAN and Trunk Configuration
+
+--------------------------------------------------------
+# Switch 1 Configuration - VLAN 10 (Sales)
+enable
+configure terminal
+interface range fa0/4-5
+ switchport mode trunk     # Trunk Port 
+exit
+
+vlan 10
+ name Sales
+
+interface range fa0/1-3
+ switchport mode access
+ switchport access vlan 10
+
+do write memory
+
+--------------------------------------------------------
+# Switch 2 Configuration - VLAN 20 (HR)
+enable
+configure terminal
+interface range fa0/4-5
+ switchport mode trunk
+exit
+
+vlan 20
+ name HR
+
+interface range fa0/1-3
+ switchport mode access
+ switchport access vlan 20
+
+do write memory
+
+--------------------------------------------------------
+# Switch 3 Configuration - VLAN 30 (Finance)
+enable
+configure terminal
+interface range fa0/4-5
+ switchport mode trunk
+exit
+
+vlan 30
+ name Fin
+
+interface range fa0/1-3
+ switchport mode access
+ switchport access vlan 30
+
+do write memory
+
+--------------------------------------------------------
+# Switch 4 Configuration - VLAN 40 (Admin)
+enable
+configure terminal
+interface range fa0/4-5
+ switchport mode trunk
+exit
+
+vlan 40
+ name Admin
+
+interface range fa0/1-3
+ switchport mode access
+ switchport access vlan 40
+
+do write memory
+
+--------------------------------------------------------
+# Switch 5 Configuration - VLAN 50 (Ice)
+enable
+configure terminal
+interface range fa0/4-5
+ switchport mode trunk
+exit
+
+vlan 50
+ name ice
+
+interface range fa0/1-3
+ switchport mode access
+ switchport access vlan 50
+
+do write memory
+
+--------------------------------------------------------
+# Switch 6 Configuration - VLAN 60 (Servers)
+enable
+configure terminal
+interface range fa0/4-5
+ switchport mode trunk
+exit
+
+vlan 60
+ name Servers
+
+interface range fa0/1-3
+ switchport mode access
+ switchport access vlan 60
+
+do write memory
