@@ -3,11 +3,13 @@
 This repository contains the complete network design and implementation for Jubilee Financial Services Ltd (JFSL), a finance service provider based in Nairobi, Kenya. The design is built using Cisco Packet Tracer and follows a robust hierarchical network model with an emphasis on security, scalability, redundancy, and performance.
 Project Overview
 
+
+
 ## JFSL operates across two floors of an eleven-story building, with five departments:
 
-    7th Floor: Human Resource (HR), Customer Service (CS), Marketing (MK)
+   1th Floor: Human Resource (HR), Customer Service (CS), Marketing (MK)
 
-    8th Floor: Legal Management (LM), Information Technology (IT)
+   2th Floor: Legal Management (LM), Information Technology (IT)
 
 Each department has user devices, IP phones, and WiFi access points. The company requires a secure and efficient network infrastructure that includes LAN, WAN, and an external server site.
 Key Requirements
@@ -37,6 +39,13 @@ Key Requirements
     Wireless network on each floor for user connectivity.
 
     Fully tested and validated network topology and configurations.
+
+
+
+![Netzwerkdiagramm](ciscopic.png) 
+
+![Netzwerkdiagramm](ciscopic.png)
+
 
 ## Technologies and Concepts Implemented
 
