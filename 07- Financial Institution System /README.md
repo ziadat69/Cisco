@@ -1,9 +1,9 @@
-Financial Services Ltd (JFSL) Network Design and Implementation
+# Financial Services Ltd (JFSL) Network Design and Implementation
 
 This repository contains the complete network design and implementation for Jubilee Financial Services Ltd (JFSL), a finance service provider based in Nairobi, Kenya. The design is built using Cisco Packet Tracer and follows a robust hierarchical network model with an emphasis on security, scalability, redundancy, and performance.
 Project Overview
 
-JFSL operates across two floors of an eleven-story building, with five departments:
+## JFSL operates across two floors of an eleven-story building, with five departments:
 
     7th Floor: Human Resource (HR), Customer Service (CS), Marketing (MK)
 
@@ -38,7 +38,7 @@ Key Requirements
 
     Fully tested and validated network topology and configurations.
 
-Technologies and Concepts Implemented
+## Technologies and Concepts Implemented
 
     Hierarchical Network Design Model with redundancy
 
@@ -60,9 +60,9 @@ Technologies and Concepts Implemented
 
     Site-to-site IPsec VPN for secure WAN communication
 
-Network Topology
 
-The topology satisfies all user and management requirements with verified, tested, and working configurations. It includes:
+
+## The topology satisfies all user and management requirements with verified, tested, and working configurations. It includes:
 
     Two Cisco Catalyst 2911 routers (HQ and server-side)
 
@@ -76,7 +76,7 @@ The topology satisfies all user and management requirements with verified, teste
 
     Wireless Access Points on every department floor
 
-Getting Started
+## Getting Started
 
     Prerequisites:
 
@@ -91,9 +91,8 @@ Getting Started
     Test Communication:
     Verify device connectivity, VoIP calls, internet access redundancy, and VPN tunnel functionality.
 
-Files Included
+## Files Included
 
-    JFSL_Network_Design.pkt — Cisco Packet Tracer project file
+    pk7.pkt — Cisco Packet Tracer project file
 
-    README.md — This project overview and instructions
 
