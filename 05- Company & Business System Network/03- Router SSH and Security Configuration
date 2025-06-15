@@ -1,0 +1,69 @@
+# Router 0 Configuration
+enable
+configure terminal
+hostname router0-SW
+
+line console 0
+ password cisco
+ login
+exit
+
+enable password cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+
+ip domain-name router0.net
+username admin password cisco
+
+crypto key generate rsa
+ 1024
+
+line vty 0 15
+ login local
+ transport input ssh
+
+ip ssh version 2
+
+do write memory
+exit
+
+--------------------------------------------------------
+
+# Router 1 Configuration
+enable
+configure terminal
+hostname routerISA-SW
+
+line console 0
+ password cisco
+ login
+exit
+
+enable password cisco
+no ip domain-lookup
+banner motd #No unauthorised Access!!!#
+service password-encryption
+
+do write memory
+
+--------------------------------------------------------
+
+# Router 2 Configuration
+enable
+configure terminal
+
+ip domain-name router2.net
+username admin password cisco
+
+crypto key generate rsa
+ 1024
+
+line vty 0 15
+ login local
+ transport input ssh
+
+ip ssh version 2
+
+do write memory
+exit
