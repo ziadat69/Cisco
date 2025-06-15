@@ -1,0 +1,45 @@
+### NAT-Konfiguration
+
+#####################
+#     ROUTER 1      #
+#####################
+
+ip nat inside source list 1 interface se0/2/0 overload
+ip nat inside source list 1 interface se0/2/1 overload
+
+access-list 1 permit 172.16.1.0 0.0.0.127
+access-list 1 permit 172.16.1.128 0.0.0.127
+access-list 1 permit 172.16.2.0 0.0.0.127
+access-list 1 permit 172.16.2.128 0.0.0.127
+access-list 1 permit 172.16.3.0 0.0.0.127
+access-list 1 permit 172.16.3.128 0.0.0.15
+
+interface range gig0/0 - 1
+ ip nat inside
+
+interface se0/2/0
+ ip nat outside
+
+interface se0/2/1
+ ip nat outside
+
+
+#####################
+#     ROUTER 2      #
+#####################
+
+ip nat inside source list 1 interface se0/3/0 overload
+ip nat inside source list 1 interface se0/3/1 overload
+
+access-list 1 permit 172.16.1.0 0.0.0.127
+access-list 1 permit 172.16.1.128 0.0.0.127
+access-list 1 permit 172.16.2.0 0.0.0.127
+access-list 1 permit 172.16.2.128 0.0.0.127
+access-list 1 permit 172.16.3.0 0.0.0.127
+access-list 1 permit 172.16.3.128 0.0.0.15
+
+interface se0/3/0
+ ip nat outside
+
+interface se0/3/1
+ ip nat outside
