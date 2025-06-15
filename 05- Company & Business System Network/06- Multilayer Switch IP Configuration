@@ -1,0 +1,33 @@
+# Multilayer Switch IP Configuration
+# Ziel: Aktivieren von L3-Routing auf den Interfaces (Routed Ports)
+
+========================================================
+Multilayer Switch 0
+========================================================
+
+interface range gig1/0/7 - 8
+ no switchport                             # Routed Port aktivieren
+
+interface gig1/0/7
+ ip address 172.16.3.145 255.255.255.252   # Verbindung zu Router A
+do write memory
+
+interface gig1/0/8
+ ip address 172.16.3.149 255.255.255.252   # Verbindung zu Router B
+do write memory
+
+
+========================================================
+Multilayer Switch 1
+========================================================
+
+interface range gig1/0/7 - 8
+ no switchport                             # Routed Port aktivieren
+
+interface gig1/0/7
+ ip address 172.16.3.53 255.255.255.252    # Verbindung zu Router C
+do write memory
+
+interface gig1/0/8
+ ip address 172.16.3.157 255.255.255.252   # Verbindung zu Router D
+do write memory
