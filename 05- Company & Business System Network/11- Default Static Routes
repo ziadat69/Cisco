@@ -1,0 +1,26 @@
+
+---
+
+### Multilayer Switch 0 & 1
+
+
+ip route 0.0.0.0 0.0.0.0 gig1/0/7
+ip route 0.0.0.0 0.0.0.0 gig1/0/8 70
+
+
+---
+
+### Router 1
+
+```plaintext
+ip route 0.0.0.0 0.0.0.0 se0/2/0
+ip route 0.0.0.0 0.0.0.0 se0/2/1 70
+```
+
+---
+
+### Router 2
+
+
+ip route 0.0.0.0 0.0.0.0 se0/3/0
+ip route 0.0.0.0 0.0.0.0 se0/3/1 70
