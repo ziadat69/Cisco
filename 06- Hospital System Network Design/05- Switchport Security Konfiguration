@@ -1,0 +1,24 @@
+#########################################################
+# Switchport Security Konfiguration für Server-Ports
+# (Anwendung auf alle Server-Switch-Ports: Fa0/1 bis Fa0/4)
+#########################################################
+
+Switch(config)# interface range fa0/1 - 4
+
+                                                   #Switchport Security aktivieren
+Switch(config-if-range)# switchport port-security
+
+                                                   #Maximal ein Gerät pro Port zulassen
+Switch(config-if-range)# switchport port-security maximum 1
+
+                                                   # MAC-Adresse des ersten verbundenen Geräts automatisch speichern (sticky)
+Switch(config-if-range)# switchport port-security mac-address sticky
+
+                                                   # Verhalten bei Verstoß: Port wird komplett deaktiviert (shutdown)
+Switch(config-if-range)# switchport port-security violation shutdown
+
+                                                   # Konfiguration speichern
+Switch(config-if-range)# do write memory
+
+                                                   # Aktuellen Status der Port-Security anzeigen
+Switch(config-if-range)# do show port-security
