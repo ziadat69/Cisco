@@ -1,0 +1,29 @@
+# ===================================================
+# Router 1 – NAT & ACL-Konfiguration mit Policy NAT
+# ===================================================
+
+# ================================
+# 🌐 Ziel: Bestimmte Subnetze sollen beim Rausgehen 
+# eine definierte IP-Adresse bzw. einen NAT-Pool nutzen.
+# ================================
+# Beispiele:
+# - 192.168.100.0/26, 192.168.100.64/26, 192.168.100.128/26
+#   sollen nach außen mit IP 192.168.100.1 erscheinen.
+# - Zielnetz: 192.168.101.0/24 (z. B. Router2-Site)
+
+# ================================
+# 🎯 Erweiterte Access-List definieren Traffic-Policys
+# ================================
+access-list 110 permit ip 192.168.100.0   0.0.0.63  192.168.101.0   0.0.0.63
+access-list 110 permit ip 192.168.100.64  0.0.0.63  192.168.101.64  0.0.0.63
+access-list 110 permit ip 192.168.100.128 0.0.0.63  192.168.101.128 0.0.0.63
+access-list 110 permit ip 192.168.100.192 0.0.0.63  192.168.101.128 0.0.0.63
+
+# Alternativ kompakter:
+# access-list 110 permit ip 192.168.100.0 0.0.0.255 192.168.101.0 0.0.0.255
+
+# =============
+
+((((router 2))))))     
+
+access-list 111 permit ip  192.168.101.128 0.0.0.255  192.168.100.0 0.0.0.255
