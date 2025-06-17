@@ -6,6 +6,9 @@ Dieses Projekt entwirft und implementiert ein sicheres, skalierbares und zuverl�
 Das Netzwerk basiert auf einem **hierarchischen Designmodell** und erfüllt Anforderungen an
 **Verfügbarkeit, Redundanz, Skalierbarkeit und Sicherheit**.
 
+
+![Netzwerkdiagramm](cisco8.png)
+
 ## Hauptmerkmale
 
 * **Standorte**: Drei Etagen (35.–37. Stock) mit über 2000 Benutzern
