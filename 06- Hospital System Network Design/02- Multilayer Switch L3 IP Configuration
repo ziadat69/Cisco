@@ -1,0 +1,51 @@
+##############################################
+# Multilayer Switch 1                        #
+##############################################
+
+Switch> enable
+Switch# configure terminal
+Switch(config)# hostname MultilayerSwitch1
+MultilayerSwitch1(config)# interface GigabitEthernet1/0/1
+MultilayerSwitch1(config-if)# no switchport
+MultilayerSwitch1(config-if)# ip address 192.168.102.85 255.255.255.252
+MultilayerSwitch1(config-if)# exit
+MultilayerSwitch1(config)# do write
+
+##############################################
+# Multilayer Switch 2                        #
+##############################################
+
+Switch> enable
+Switch# configure terminal
+Switch(config)# hostname MultilayerSwitch2
+MultilayerSwitch2(config)# interface GigabitEthernet1/0/1
+MultilayerSwitch2(config-if)# no switchport
+MultilayerSwitch2(config-if)# ip address 192.168.102.81 255.255.255.252
+MultilayerSwitch2(config-if)# exit
+MultilayerSwitch2(config)# do write
+
+##############################################
+# Multilayer Switch 3                        #
+##############################################
+
+Switch> enable
+Switch# configure terminal
+Switch(config)# hostname MultilayerSwitch3
+MultilayerSwitch3(config)# interface GigabitEthernet1/0/1
+MultilayerSwitch3(config-if)# no switchport
+MultilayerSwitch3(config-if)# ip address 192.168.102.93 255.255.255.252
+MultilayerSwitch3(config-if)# exit
+MultilayerSwitch3(config)# do write
+
+##############################################
+# Multilayer Switch 4                        #
+##############################################
+
+Switch> enable
+Switch# configure terminal
+Switch(config)# hostname MultilayerSwitch4
+MultilayerSwitch4(config)# interface GigabitEthernet1/0/1
+MultilayerSwitch4(config-if)# no switchport
+MultilayerSwitch4(config-if)# ip address 192.168.102.97 255.255.255.252
+MultilayerSwitch4(config-if)# exit
+MultilayerSwitch4(config)# do write
