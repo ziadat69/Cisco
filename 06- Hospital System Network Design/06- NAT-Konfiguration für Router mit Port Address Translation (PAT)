@@ -1,0 +1,56 @@
+#########################################################
+# NAT-Konfiguration für Router 1
+#########################################################
+
+                                  ( Schnittstellen für NAT Outside (Internetzugang))
+interface Serial0/1/0
+ ip nat outside
+
+interface Serial0/1/1
+ ip nat outside
+
+                                 ( Schnittstellen für NAT Inside (interne Netzwerke))
+interface range GigabitEthernet0/0 - 2
+ ip nat inside
+
+
+
+                                ( NAT Overload (PAT) konfigurieren - Port Address Translation)
+ip nat inside source list 1 interface Serial0/1/0 overload
+ip nat inside source list 1 interface Serial0/1/1 overload
+
+
+                               ( Access-List definiert die internen Netzwerke, die NAT nutzen dürfen) 
+access-list 1 permit 192.168.100.0 0.0.0.63
+access-list 1 permit 192.168.100.64 0.0.0.63
+access-list 1 permit 192.168.100.128 0.0.0.63
+access-list 1 permit 192.168.100.192 0.0.0.63
+
+                               ( NAT Übersetzungen anzeigen )
+do show ip nat translations
+
+#########################################################
+# NAT-Konfiguration für Router 2
+#########################################################
+
+                                 (Schnittstellen für NAT Outside (Internetzugang))
+interface Serial0/2/0
+ ip nat outside
+
+interface Serial0/2/1
+ ip nat outside
+
+                                 ( Schnittstellen für NAT Inside (interne Netzwerke))
+interface range GigabitEthernet0/0 - 2
+ ip nat inside
+
+                                ( Access-List definiert die internen Netzwerke, die NAT nutzen dürfen)
+access-list 1 permit 192.168.101.0 0.0.0.63
+access-list 1 permit 192.168.101.64 0.0.0.63
+access-list 1 permit 192.168.101.128 0.0.0.63
+access-list 1 permit 192.168.101.192 0.0.0.63
+
+                                (NAT Overload (PAT) konfigurieren - Port Address Translation)
+
+ip nat inside source list 1 interface Serial0/2/0 overload
+ip nat inside source list 1 interface Serial0/2/1 overload
