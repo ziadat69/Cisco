@@ -27,3 +27,32 @@ BPDU Guard ist eine Funktion, die das Netzwerk schützt, indem sie den Port absc
 Sie wird nur an Ports aktiviert, die mit Endgeräten verbunden sind, um falsche Switch-Verbindungen zu verhindern.
 So sorgt sie für Stabilität im Netzwerk und erhält die Integrität des Spanning Tree Protokolls.
   
+
+=================
+switch controller 
+==================
+
+interface range  FastEthernet0/1-3 
+switchport mode trunk  
+exit 
+  interface FastEthernet0/4 
+switchport mode access
+
+switchport access vlan 10
+
+switchport voice vlan 99 
+exit  
+ 
+interface range  FastEthernet0/5-24 
+switchport mode access 
+
+switchport access vlan 50
+
+switchport voice vlan 99 
+exit   
+
+interface range  FastEthernet0/3-24
+
+spanning-tree portfast
+
+spanning-tree bpduguard enable
