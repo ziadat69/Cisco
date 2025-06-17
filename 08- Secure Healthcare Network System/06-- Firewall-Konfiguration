@@ -1,0 +1,34 @@
+! === Netzwerkobjekte für NAT ===
+
+object network LAN-INTERNET
+ subnet 192.168.0.0 255.255.240.0          ! Lokales LAN-Netz (VLAN 50)
+ nat (INSIDE,OUTSIDE) dynamic interface    ! NAT von INSIDE ins OUTSIDE mit dynamischer IP (PAT)
+
+object network WLAN-INTERNET
+ subnet 10.20.0.0 255.255.255.192          ! WLAN-/DMZ-Netz
+ nat (DMZ,OUTSIDE) dynamic interface       ! NAT von DMZ ins OUTSIDE mit dynamischer IP (PAT)
+
+exit
+
+! === Access-Listen für Datenverkehr von INSIDE zur DMZ ===
+
+access-list INSIDE-DMZ extended permit icmp any any         ! Erlaube ICMP (Ping etc.)
+access-list INSIDE-DMZ extended permit tcp any any eq 80     ! Erlaube HTTP (Port 80)
+access-list INSIDE-DMZ extended permit udp any any eq 57     ! (Optionaler Port – z. B. für Routing-Protokolle)
+access-list INSIDE-DMZ extended permit udp any any eq 58     ! (z. B. Router Advertisement – ICMPv6)
+access-list INSIDE-DMZ extended permit udp any any eq 53     ! Erlaube DNS-Anfragen via UDP
+access-list INSIDE-DMZ extended permit tcp any any eq 53     ! Erlaube DNS-Anfragen via TCP
+
+access-group INSIDE-DMZ in interface DMZ                    ! Wende ACL auf eingehenden Verkehr auf DMZ an
+
+! === Access-Listen für Datenverkehr von INSIDE zur OUTSIDE ===
+
+access-list INSIDE-OUTSIDE extended permit icmp any any      ! Erlaube ICMP (z. B. Ping ins Internet)
+access-list INSIDE-OUTSIDE extended permit tcp any any eq 80 ! Erlaube HTTP (Port 80)
+
+access-group INSIDE-OUTSIDE in interface OUTSIDE             ! Wende ACL auf eingehenden Verkehr auf OUTSIDE an
+
+! === Konfiguration speichern ===
+
+do wr          ! Speichert Konfiguration im RAM
+wr mem         ! Schreibt Konfiguration ins NVRAM (dauerhaft)
