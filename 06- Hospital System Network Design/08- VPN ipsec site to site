@@ -1,0 +1,93 @@
+# ========================================
+# 🔐 VPN Konfiguration – Router 1 (HQ-Seite)
+# ========================================
+
+# 🔧 Lizenz aktivieren (für Crypto-Funktionen)
+license boot module c2900 technology-package securityk9
+
+# ================================
+#  ISAKMP Phase 1 – IKE Policy
+# ================================
+crypto isakmp policy 10
+ encryption aes 256             # Verschlüsselungsalgorithmus
+ authentication pre-share       # Authentifizierung mit Passwort
+ group 5                        # Diffie-Hellman Group 5 (1536-bit)
+
+# 🔑 Pre-Shared Key
+crypto isakmp key USCisco address 192.168.102.90
+
+# ================================
+#  IPSec Phase 2 – Transform-Set
+# ================================
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
+
+# ================================
+#  VPN Map binden
+# ================================
+crypto map VPN-MAP 10 ipsec-isakmp
+ description THIS VPN CONNECTED TO BRANCH BEREICH
+ set peer 192.168.102.90
+ set transform-set VPN-SET
+ match address 110               # Access List für Verkehr
+
+# ================================
+#  Schnittstelle konfigurieren
+# ================================
+interface Serial0/0/0
+ description WAN Link to Branch
+ ip address 192.168.102.89 255.255.255.252
+ crypto map VPN-MAP
+
+# ================================
+# Zugriffsliste für zu sichernden Verkehr
+# ================================
+access-list 110 permit ip 192.168.100.0 0.0.0.255 192.168.200.0 0.0.0.255
+
+# 🧪 Speichern und Prüfen
+do write memory
+do show crypto isakmp sa
+do show crypto ipsec sa
+
+# ========================================# ==========================================# ==========================================
+# 🔐 VPN Konfiguration – Router 2 (Branch-Seite)
+# ==========================================# ==========================================# ==========================================
+# 🔧 ISAKMP Phase 1 – IKE Policy
+crypto isakmp policy 10
+ encryption aes 256
+ authentication pre-share
+ group 5
+
+# Pre-Shared Key
+crypto isakmp key USCisco address 192.168.102.89
+
+# ================================
+# IPSec Phase 2 – Transform-Set
+# ==========================================
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
+
+# ================================
+#  VPN Map binden
+# ================================
+crypto map VPN-MAP 10 ipsec-isakmp
+ description THIS VPN CONNECTED TO HQ BEREICH
+ set peer 192.168.102.89
+ set transform-set VPN-SET
+ match address 110
+
+# ================================
+# Schnittstelle konfigurieren
+# ================================
+interface Serial0/1/0
+ description WAN Link to HQ
+ ip address 192.168.102.90 255.255.255.252
+ crypto map VPN-MAP
+
+# ================================
+#  Zugriffsliste für zu sichernden Verkehr
+# ================================
+access-list 110 permit ip 192.168.200.0 0.0.0.255 192.168.100.0 0.0.0.255
+
+# 🧪 Speichern und Prüfen
+do write memory
+do show crypto isakmp sa
+do show crypto ipsec sa
