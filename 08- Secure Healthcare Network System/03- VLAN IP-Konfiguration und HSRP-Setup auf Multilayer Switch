@@ -1,0 +1,29 @@
+! VLAN 10 - WLAN
+interface vlan 10
+ ip address 10.10.0.3 255.255.240.0
+ ip helper-address 10.20.10.10
+ standby 10 priority 150
+ standby 10 ip 10.10.0.1
+ no shutdown
+exit
+
+! VLAN 50 - LAN
+interface vlan 50
+ ip address 192.168.0.3 255.255.240.0
+ ip helper-address 10.20.10.10
+ standby 50 priority 150
+ standby 50 ip 192.168.0.1
+ no shutdown
+exit
+
+! VLAN 99 - Voice
+interface vlan 99
+ ip address 172.16.0.3 255.255.240.0
+ ip helper-address 10.20.10.10
+ standby 99 priority 150
+ standby 99 ip 172.16.0.1
+ no shutdown
+exit
+
+! Speichere die Konfiguration
+write memory
