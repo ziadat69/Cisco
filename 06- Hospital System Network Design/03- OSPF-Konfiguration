@@ -1,0 +1,86 @@
+########################################
+#             ROUTER 1                #
+########################################
+Router(config)# router ospf 10
+Router(config-router)# router-id 1.1.1.1
+Router(config-router)# network 195.136.17.4 0.0.0.3 area 0    # to isprouter2
+Router(config-router)# network 195.136.17.0 0.0.0.3 area 0    # to isprouter1
+Router(config-router)# network 192.168.102.84 0.0.0.3 area 0  # to multilayer switch
+Router(config-router)# network 192.168.102.80 0.0.0.3 area 0  # to multilayer switch
+Router(config-router)# network 192.168.102.88 0.0.0.3 area 0  # to router2
+Router(config-router)# network 192.168.102.64 0.0.0.15 area 0
+
+########################################
+#             ROUTER 2                #
+########################################
+Router(config)# router ospf 10
+Router(config-router)# router-id 2.2.2.2
+Router(config-router)# network 192.168.102.88 0.0.0.3 area 0
+Router(config-router)# network 195.136.17.8 0.0.0.3 area 0
+Router(config-router)# network 195.136.17.12 0.0.0.3 area 0
+Router(config-router)# network 192.168.102.92 0.0.0.3 area 0
+Router(config-router)# network 192.168.102.96 0.0.0.3 area 0
+
+########################################
+#         ISP ROUTER 1                #
+########################################
+Router(config)# router ospf 10
+Router(config-router)# router-id 3.3.3.3
+Router(config-router)# network 195.136.17.0 0.0.0.3 area 0
+Router(config-router)# network 195.136.17.8 0.0.0.3 area 0
+
+########################################
+#         ISP ROUTER 2                #
+########################################
+Router(config)# router ospf 10
+Router(config-router)# router-id 4.4.4.4
+Router(config-router)# network 195.136.17.4 0.0.0.3 area 0
+Router(config-router)# network 195.136.17.12 0.0.0.3 area 0
+
+########################################
+#       MULTILAYER SWITCH 1           #
+########################################
+MultilayerSwitch1(config)#   ip routing
+MultilayerSwitch1(config)#   router ospf 10
+MultilayerSwitch1(config-router)# router-id 5.5.5.5
+MultilayerSwitch1(config-router)# network 192.168.100.0 0.0.0.63 area 0
+MultilayerSwitch1(config-router)# network 192.168.100.64 0.0.0.63 area 0
+MultilayerSwitch1(config-router)# network 192.168.100.128 0.0.0.63 area 0
+MultilayerSwitch1(config-router)# network 192.168.100.192 0.0.0.63 area 0
+MultilayerSwitch1(config-router)# network 192.168.102.84 0.0.0.3 area 0
+
+########################################
+#       MULTILAYER SWITCH 2           #
+########################################
+MultilayerSwitch2(config)#   ip routing
+MultilayerSwitch2(config)#   router ospf 10
+MultilayerSwitch2(config-router)# router-id 6.6.6.6
+MultilayerSwitch2(config-router)# network 192.168.100.0 0.0.0.63 area 0
+MultilayerSwitch2(config-router)# network 192.168.100.64 0.0.0.63 area 0
+MultilayerSwitch2(config-router)# network 192.168.100.128 0.0.0.63 area 0
+MultilayerSwitch2(config-router)# network 192.168.100.192 0.0.0.63 area 0
+MultilayerSwitch2(config-router)# network 192.168.102.80 0.0.0.3 area 0
+
+########################################
+#       MULTILAYER SWITCH 3           #
+########################################
+MultilayerSwitch3(config)#    ip routing
+MultilayerSwitch3(config)#    router ospf 10
+MultilayerSwitch3(config-router)# router-id 7.7.7.7
+MultilayerSwitch3(config-router)# network 192.168.101.0 0.0.0.63 area 0
+MultilayerSwitch3(config-router)# network 192.168.101.64 0.0.0.63 area 0
+MultilayerSwitch3(config-router)# network 192.168.101.128 0.0.0.63 area 0
+MultilayerSwitch3(config-router)# network 192.168.101.192 0.0.0.63 area 0
+MultilayerSwitch3(config-router)# network 192.168.102.92 0.0.0.3 area 0
+
+########################################
+#       MULTILAYER SWITCH 4           #
+########################################
+MultilayerSwitch4(config)#        ip routing
+MultilayerSwitch4(config)#        router ospf 10
+MultilayerSwitch4(config-router)#   router-id 8.8.8.8
+MultilayerSwitch4(config-router)#   network 192.168.101.0 0.0.0.63 area 0
+MultilayerSwitch4(config-router)#   network 192.168.100.64 0.0.0.63 area 0
+MultilayerSwitch4(config-router)#   network 192.168.101.128 0.0.0.63 area 0
+MultilayerSwitch4(config-router)#   network 192.168.101.192 0.0.0.63 area 0
+MultilayerSwitch4(config-router)#   network 192.168.102.96 0.0.0.3 area 0
