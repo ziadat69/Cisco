@@ -1,0 +1,37 @@
+! VLANs anlegen
+vlan 10
+vlan 50
+vlan 99
+
+! Trunk-Ports konfigurieren
+interface range gig1/0/2-8
+ switchport mode trunk
+ exit
+
+                                 ! EtherChannel konfigurieren (LACP aktiv)
+interface range gig1/0/21-24
+ channel-group 1 mode active
+ exit
+
+                                  ! Port-Channel Schnittstelle konfigurieren
+interface port-channel 1
+ switchport mode trunk
+ exit
+
+
+================
+! Management-Interfaces konfigurieren
+
+! Multilayer Switch 1
+interface gig1/0/1
+ no switchport
+ ip address 10.30.10.5 255.255.255.252
+ no shutdown
+ exit
+
+! Multilayer Switch 2
+interface gig1/0/1
+ no switchport
+ ip address 10.30.10.9 255.255.255.252
+ no shutdown
+ exit
