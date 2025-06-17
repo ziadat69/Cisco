@@ -1,0 +1,40 @@
+enable
+configure terminal
+
+hostname FIREWALL
+domain-name cisco.com
+
+! Interface GigabitEthernet1/1 - INSIDE
+interface gig1/2
+ no shutdown
+ ip address 10.30.10.2 255.255.255.252
+ nameif INSIDE
+ security-level 100
+ exit
+
+! Interface GigabitEthernet1/2 
+interface gig1/2
+ no shutdown
+ ip address 10.20.10.2 255.255.255.192
+ nameif DMZ
+ security-level 70
+ exit
+
+! Interface GigabitEthernet1/3 - OUTSIDE
+interface gig1/3
+ no shutdown
+ ip address 197.200.100.3 255.255.255.252
+ nameif OUTSIDE
+ security-level 0
+ exit
+
+! OSPF Konfiguration
+router ospf 10
+ router-id 6.6.5.5
+ network 10.20.10.0 0.0.0.63 area 0
+ network 10.30.10.0 0.0.0.3 area 0
+ network 197.200.100.1 0.0.0.3 area 0
+ exit
+
+! Default Route zum OUTSIDE Interface
+route OUTSIDE 0.0.0.0 0.0.0.0 197.200.100.2
