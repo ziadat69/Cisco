@@ -21,6 +21,18 @@ A larger, more complex network designed for a university or educational institut
 5️⃣ **Company/Business System Network**  
 This project showcases a corporate network design suitable for small to medium-sized businesses. It includes separate departments or workgroups (such as HR, Sales, IT), each with its own VLANs and secure connections to ensure data separation and policy enforcement. It also demonstrates the integration of key services like file servers, VoIP, and security appliances
 
+
+06 - Hospital System Network Design
+
+A hospital network focused on security, emergency availability, medical device connectivity, and patient management systems.
+
+07 - Financial Institution System
+
+A high-security network for banks or financial institutions, with firewalls, IDS, encrypted data transfer, and role-based access control.
+
+08 - Secure Healthcare Network System
+
+An advanced secure healthcare network with encryption, multi-layer access control, network monitoring, and HIPAA/GDPR-compliant data protection
 ---
 
 ## ⚙️ Technologies and Tools
