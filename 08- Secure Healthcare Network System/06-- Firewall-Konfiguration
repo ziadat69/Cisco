@@ -32,3 +32,11 @@ access-group INSIDE-OUTSIDE in interface OUTSIDE             ! Wende ACL auf ein
 
 do wr          ! Speichert Konfiguration im RAM
 wr mem         ! Schreibt Konfiguration ins NVRAM (dauerhaft)
+
+
+
+
+نفذ هالأوامر على الـ ASA عشان تسمح لحركة DHCP:
+
+access-list INSIDE-DMZ extended permit udp any any eq bootps
+access-list INSIDE-DMZ extended permit udp any any eq bootp 
