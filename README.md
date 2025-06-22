@@ -18,6 +18,8 @@ A small office or home office network with internet access, file sharing, printi
 
 A hotel network with VLANs, guest access, and security measures for different areas.
 
+ ![Netzwerkdiagramm](ciscopic3.png)
+
 4️⃣ University Campus Network
 
 A scalable university network with subnets, VLANs, redundant links, and core services like VoIP.
