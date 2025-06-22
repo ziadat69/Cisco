@@ -6,44 +6,95 @@ Here you’ll find four different Cisco network projects, each demonstrating spe
 
 ## 📁 Projects
 
-1️⃣ **Simple Networking Project #1**  
-A basic networking project that showcases key network components such as routers, switches, and end devices in a simple topology. The goal is to practice fundamental configurations like IP addressing and basic routing protocols.
+1️⃣ Simple Networking Project
 
-2️⃣ **Small Office Home Office Network - SOHO**  
-A typical small office/home office setup that demonstrates how multiple devices are connected to ensure secure internet access, file sharing, and printing services. This project may include wireless components and basic security features.
+ A basic network with routers, switches, and end devices for practicing IP addressing and fundamental routing protocols.
 
-3️⃣ **Hotel System Network**  
-This project focuses on designing a network for a hotel, covering various areas (e.g., guest rooms, administration, restaurant). Special attention is given to VLANs, security measures, and guest network configurations.
+2️⃣ SOHO Network
 
-4️⃣ **University System Network**  
-A larger, more complex network designed for a university or educational institution. It includes multiple subnets, VLANs, redundant connections, and services like VoIP or video surveillance. This project emphasizes scalability and efficiency in a dynamic environment.
+A small office or home office network with internet access, file sharing, printing services, and wireless security.
 
-5️⃣ **Company/Business System Network**  
-This project showcases a corporate network design suitable for small to medium-sized businesses. It includes separate departments or workgroups (such as HR, Sales, IT), each with its own VLANs and secure connections to ensure data separation and policy enforcement. It also demonstrates the integration of key services like file servers, VoIP, and security appliances
+3️⃣ Hotel Network Design
 
+A hotel network with VLANs, guest access, and security measures for different areas.
 
-06 - Hospital System Network Design
+4️⃣ University Campus Network
 
-A hospital network focused on security, emergency availability, medical device connectivity, and patient management systems.
+A scalable university network with subnets, VLANs, redundant links, and core services like VoIP.
 
-07 - Financial Institution System
+5️⃣ Corporate / Business Network
 
-A high-security network for banks or financial institutions, with firewalls, IDS, encrypted data transfer, and role-based access control.
+A business network with VLANs for departments, secure connections, and integration of key services.
 
-08 - Secure Healthcare Network System
+6️⃣ Hospital Network Design
 
-An advanced secure healthcare network with encryption, multi-layer access control, network monitoring, and HIPAA/GDPR-compliant data protection
----
+A high-availability hospital network supporting medical devices, patient data systems, and emergency operations.
 
-## ⚙️ Technologies and Tools
+7️⃣ Financial Institution Network
 
-- Cisco Packet Tracer 
-- Router and switch configuration (CLI)
-- VLANs, routing protocols (e.g., OSPF, EIGRP), NAT, DHCP
-- Security configurations (Access Control Lists, Port-Security)
+A secure banking network with firewalls, IDS/IPS, encryption, and role-based access control.
+
+8️⃣ Secure Healthcare Network
+
+A healthcare network with end-to-end encryption, layered access control, and data protection compliance.
+
 
 ---
 
+
+⚙️ Technologies and Tools
+
+    Cisco Packet Tracer, GNS3, EVE-NG for network simulation and emulation
+
+    Router and switch configuration via CLI (Command Line Interface)
+
+    VLANs, Inter-VLAN Routing, and Routing Protocols (OSPF, EIGRP, RIP, BGP)
+
+    NAT, PAT, DHCP, and DNS configurations
+
+    STP (Spanning Tree Protocol) and RSTP for loop prevention
+
+    HSRP, VRRP for redundancy and failover
+
+    Access Control Lists (ACLs), Port-Security, and 802.1X authentication
+
+    Firewall configuration (basic and advanced rules)
+
+    VPN setup (IPSec, SSL) for secure remote access
+
+    SNMP, Syslog, and NetFlow for monitoring and management
+
+    Wireless LAN setup including WPA2/WPA3 security
+
+    QoS (Quality of Service) configuration for traffic prioritization
+
+    IPv4 and IPv6 addressing and transition mechanisms
+
+    Server integration (file servers, print servers, VoIP servers)
+
+    Physical layer planning (cabling, patch panels, switch stacking)
+
+✅ Security Technologies
+
+    ACLs (standard, extended, named)
+
+    Port-Security
+
+    802.1X (Network Access Control)
+
+    RADIUS / TACACS+ authentication
+
+    Firewalls (Cisco ASA, Palo Alto, pfSense)
+
+    IDS / IPS (Intrusion Detection / Prevention Systems)
+
+    MAC Filtering, Dynamic ARP Inspection
+
+    DHCP Snooping
+
+    Private VLANs (PVLAN)
+
+    Network segmentation / Microsegmentation
 
 
 
