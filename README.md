@@ -50,7 +50,7 @@ A secure banking network with firewalls, IDS/IPS, encryption, and role-based acc
 
 A healthcare network with end-to-end encryption, layered access control, and data protection compliance.
 
-![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
+![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/08-%20Secure%20Healthcare%20Network%20System/cisco8.png)
 
 
 ---
