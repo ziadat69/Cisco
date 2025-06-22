@@ -1,0 +1,45 @@
+ DHCP-Server für Telefonie
+
+
+! Schnittstellen-Konfiguration für VLAN 120 (Telefonbereich)
+interface FastEthernet0/0.120
+ encapsulation dot1Q 120
+ ip address 10.10.10.1 255.255.255.0
+ no shutdown
+!
+! Konfiguration speichern
+do write memory
+!
+! DHCP-Dienst aktivieren
+service dhcp
+!
+! IP-Adresse des Routers vom DHCP ausschließen
+ip dhcp excluded-address 172.16.0.1
+!
+! DHCP-Pool für den Telefonbereich
+ip dhcp pool Voice
+ network 172.16.0.0 255.255.240.0
+ default-router 172.16.0.1
+ dns-server 172.16.0.1
+ option 150 ip 172.16.0.1   ! TFTP-Server für IP-Telefone
+!
+! Cisco Telephony-Service konfigurieren
+telephony-service
+ max-ephones 20
+ max-dn 20
+ ip source-address 172.16.0.1 port 2000
+ auto assign 1 to 20
+!
+! Telefon-Durchwahlen (Directory Numbers) definieren
+ephone-dn 1
+ number 05031
+!
+ephone-dn 2
+ number 05032
+!
+ephone-dn 3
+ number 05033
+!
+ephone-dn 4
+ number 05034
+!
