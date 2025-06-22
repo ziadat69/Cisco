@@ -42,7 +42,7 @@ Key Requirements
 
 
 
-![Netzwerkdiagramm](ciscopic7.png) 
+![Netzwerkdiagramm](ciscopic77.png) 
 
 
 
