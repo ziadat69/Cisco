@@ -36,16 +36,20 @@ A business network with VLANs for departments, secure connections, and integrati
 
 A high-availability hospital network supporting medical devices, patient data systems, and emergency operations.
 
- ![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/05-%20Company%20%26%20Business%20System%20Network/ciscopic5.png)
-
+ ![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
+)
 
 7️⃣ Financial Institution Network
 
 A secure banking network with firewalls, IDS/IPS, encryption, and role-based access control.
 
+https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
+
 8️⃣ Secure Healthcare Network
 
 A healthcare network with end-to-end encryption, layered access control, and data protection compliance.
+
+https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
 
 
 ---
