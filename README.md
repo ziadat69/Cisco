@@ -30,9 +30,14 @@ A scalable university network with subnets, VLANs, redundant links, and core ser
 
 A business network with VLANs for departments, secure connections, and integration of key services.
 
+ ![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/05-%20Company%20%26%20Business%20System%20Network/ciscopic5.png)
+
 6️⃣ Hospital Network Design
 
 A high-availability hospital network supporting medical devices, patient data systems, and emergency operations.
+
+ ![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/05-%20Company%20%26%20Business%20System%20Network/ciscopic5.png)
+
 
 7️⃣ Financial Institution Network
 
