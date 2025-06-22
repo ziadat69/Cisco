@@ -56,7 +56,7 @@ A healthcare network with end-to-end encryption, layered access control, and dat
 ---
 
 
-⚙️ Technologies and Tools
+## ⚙️ Technologies and Tools
 
     Cisco Packet Tracer, GNS3, EVE-NG for network simulation and emulation
 
@@ -88,7 +88,7 @@ A healthcare network with end-to-end encryption, layered access control, and dat
 
     Physical layer planning (cabling, patch panels, switch stacking)
 
-✅ Security Technologies
+## ✅ Security Technologies
 
     ACLs (standard, extended, named)
 
