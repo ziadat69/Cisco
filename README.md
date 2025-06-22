@@ -43,13 +43,14 @@ A high-availability hospital network supporting medical devices, patient data sy
 
 A secure banking network with firewalls, IDS/IPS, encryption, and role-based access control.
 
-https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
+ ![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/07-%20Financial%20Institution%20System/ciscopic7.png)
 
+ 
 8️⃣ Secure Healthcare Network
 
 A healthcare network with end-to-end encryption, layered access control, and data protection compliance.
 
-https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
+![Netzwerkdiagramm](https://github.com/ziadat69/Cisco/blob/main/06-%20Hospital%20System%20Network%20Design/ciscopic.png
 
 
 ---
